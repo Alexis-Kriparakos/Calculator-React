@@ -1,11 +1,20 @@
 .btn {
-	font-size: 1.2em;
-	width: 50px;
-	height: 50px;
+  font-size: 1.8em;
+  width: 100px;
+  height: 80px;
+  border: none;
 }
 .btn:focus {
-	outline-color: grey;
+  outline-color: #64ffda;
+  border: none;
 }
 .btn-operand {
-	background-color: #1b79e7;
+  border-color: #64ffda;
+  background-color: #0a192f;
+  color: #64ffda;
+}
+
+.btn-number {
+  background-color: rgb(77, 85, 107);
+  color: #64ffda;
 }
