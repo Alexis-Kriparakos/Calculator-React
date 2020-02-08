@@ -1,0 +1,11 @@
+.btn {
+	font-size: 1.2em;
+	width: 50px;
+	height: 50px;
+}
+.btn:focus {
+	outline-color: grey;
+}
+.btn-operand {
+	background-color: #1b79e7;
+}
