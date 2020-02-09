@@ -1,0 +1,28 @@
+.calculator__display {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  padding-right: 20px;
+  height: 100px;
+  color: #64ffda;
+  background: #1c191c;
+  font-size: 2.5em;
+  font-weight: 800;
+  text-align: end;
+  line-height: 70px;
+}
+
+@media screen and (max-width: 770px) {
+  .calculator__display {
+    width: 300px;
+    height: 60px;
+    line-height: 65px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .calculator__display {
+    width: 220px;
+    height: 60px;
+    line-height: 65px;
+    font-size: 1.8em;
+  }
+}

@@ -1,17 +1,15 @@
 import React from "react";
-import "./ExchangeRates.css";
+import "./styles/ExchangeRates.css";
 
 function ExchangeRates(props) {
+  const { country, currency, handleClick } = props;
   return (
-    <div className="list__item">
-      <p className="list__title">Exchange to {props.country}'s currency:</p>
-      <button
-        className="btn__currency"
-        onClick={() => props.handleClick(props.currency)}
-      >
-        {props.country}
+    <li className="list__item">
+      <p className="list__title">Exchange to {country}'s currency:</p>
+      <button className="btn__currency" onClick={() => handleClick(currency)}>
+        {country}
       </button>
-    </div>
+    </li>
   );
 }
 

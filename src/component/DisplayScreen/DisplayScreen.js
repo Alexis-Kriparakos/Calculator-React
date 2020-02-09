@@ -1,9 +1,9 @@
 import React from "react";
-import "./Input.css";
+import "./DisplayScreen.css";
 
-function Input(props) {
+function DisplayScreen(props) {
   const { display } = props;
   return <div className="calculator__display">{display}</div>;
 }
 
-export default Input;
+export default DisplayScreen;

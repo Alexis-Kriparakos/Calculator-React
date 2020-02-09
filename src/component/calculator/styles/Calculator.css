@@ -1,0 +1,33 @@
+.app__wrapper {
+  display: flex;
+  justify-content: center;
+}
+.calculator {
+  box-sizing: border-box;
+
+  width: 400px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+}
+.buttons__row {
+  display: flex;
+}
+.currency__list {
+  margin: 2%;
+}
+
+@media screen and (max-width: 770px) {
+  .calculator {
+    width: 350px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .calculator {
+    width: 220px;
+    height: 300px;
+  }
+}

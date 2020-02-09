@@ -1,9 +1,15 @@
 import React from "react";
 import "./App.css";
-import Calculator from "./component/calculator/Calculator";
+import Calculator from "./component/calculator";
+import Logo from "./component/logo";
 
 function App() {
-	return <Calculator />;
+  return (
+    <div>
+      <Logo />
+      <Calculator />
+    </div>
+  );
 }
 
 export default App;

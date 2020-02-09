@@ -1,10 +1,11 @@
 /* eslint-disable */
 import React from "react";
 import Button from "../button";
-import Input from "../Input";
+import Logo from "../logo";
+import DisplayScreen from "../DisplayScreen";
 import ExchangeRates from "../exchangeRates";
-import "./Calculator.css";
 import { evaluateCalc, multiplyTwoNumbers } from "../../utilities/calc";
+import "./styles/Calculator.css";
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -92,16 +93,18 @@ class Calculator extends React.Component {
   handleCurrency = currency => {
     let currentValue = this.state.input;
     let currencyRate;
-    if (currency === "$") {
-      currencyRate = this.state.rates.USD;
-      this.setState({
-        display: multiplyTwoNumbers(currentValue, currencyRate).toString()
-      });
-    } else if (currency === "¥") {
-      currencyRate = this.state.rates.JPY;
-      this.setState({
-        display: multiplyTwoNumbers(currentValue, currencyRate).toString()
-      });
+    if (this.state.display) {
+      if (currency === "$") {
+        currencyRate = this.state.rates.USD;
+        this.setState({
+          display: multiplyTwoNumbers(currentValue, currencyRate).toString()
+        });
+      } else if (currency === "¥") {
+        currencyRate = this.state.rates.JPY;
+        this.setState({
+          display: multiplyTwoNumbers(currentValue, currencyRate).toString()
+        });
+      }
     }
   };
   handleNumber = value => {
@@ -150,7 +153,7 @@ class Calculator extends React.Component {
     return (
       <div className="app__wrapper">
         <div className="calculator">
-          <Input display={this.state.display} />
+          <DisplayScreen display={this.state.display} />
           <div className="calculator__buttons">
             <div className="buttons__row">
               <Button isNumber={this.isNumber} handleClick={this.handleReset}>
@@ -232,7 +235,7 @@ class Calculator extends React.Component {
               >
                 $
               </Button>
-              <div className="logo">ReactCalc</div>
+              <Logo />
               <Button
                 isNumber={this.isNumber}
                 handleClick={this.handleCurrency}
@@ -242,7 +245,7 @@ class Calculator extends React.Component {
             </div>
           </div>
         </div>
-        <div className="currency__list">{exchangeCurrency}</div>
+        <ul className="currency__list">{exchangeCurrency}</ul>
       </div>
     );
   }
