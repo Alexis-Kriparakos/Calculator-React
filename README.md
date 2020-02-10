@@ -1,3 +1,11 @@
+In the project directory, you need to run:
+
+## `npm install`
+
+node_modules are on .gitignore
+
+Default currency is Euro
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
