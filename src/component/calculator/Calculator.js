@@ -119,11 +119,11 @@ class Calculator extends React.Component {
     access_key=2bfbded8300778f4269e781a93ff923b&
     symbols=USD,JPY,CAD,SEK,GBP&format=1`;
 		fetch(URL)
-			.then(currencyRates => currencyRates.json())
-			.then(currencyRates => {
+			.then(curr => curr.json())
+			.then(curr => {
 				let {
 					rates: { USD, JPY, CAD, SEK, GBP },
-				} = currencyRates;
+				} = curr;
 				this.setState({
 					rates: {
 						USD: USD,

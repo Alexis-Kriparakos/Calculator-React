@@ -1,7 +1,7 @@
 const calculatorOperations = {
 	additionTwoNumbers: (firstNumber, secondNumber) => {
 		let result = parseFloat(firstNumber) + parseFloat(secondNumber);
-		return calculatorOperations.roundResult(result);
+		return roundResult(result);
 	},
 	substractTwoNumbers: (firstNumber, secondNumber) => {
 		let result = parseFloat(firstNumber) - parseFloat(secondNumber);
